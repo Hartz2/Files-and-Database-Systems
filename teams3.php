@@ -17,7 +17,7 @@ $result = $conn->query($sql);
 // Display the resulting table
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        echo $row["Team"] . "\n";
+        echo "Cletis is a member of the " . $row["Team"] . "\n";
     }
 } else {
     echo "0 results";
