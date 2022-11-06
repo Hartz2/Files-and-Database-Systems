@@ -23,7 +23,7 @@ if ($result->num_rows > 0) {
         echo $row["Player"] . " plays at ";
         echo $row["be_there"];
         if($row["snack"]) {echo " bringing snacks" . " against the "; } else {echo " without snacks" . " against the ";}
-        echo $row["against"] . " coached by ";
+        echo $row["against"] . ", who are coached by ";
         echo $row["lead_by"] . "\n";
     }
 } else {
