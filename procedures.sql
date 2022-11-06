@@ -1,7 +1,7 @@
 DELIMITER $$
 CREATE PROCEDURE listTeams()
 BEGIN
-    SELECT Team FROM Teams;
+SELECT Team FROM Teams;
 END $$
 
 DELIMITER $$
