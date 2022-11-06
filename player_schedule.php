@@ -18,13 +18,12 @@ $player = readline("Enter the player: ");
 $sql = "CALL get_schedule('$player')";
 $result = $conn->query($sql);
 // Display the resulting table
-echo "Player |       Game Time     | snacks |  Foe  | Coach    " . "\n";
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        echo $row["Player"] . " | ";
-        echo $row["be_there"] . " |    ";
-        echo $row["snack"] . "   | ";
-        echo $row["against"] . " | ";
+        echo $row["Player"] . " plays at ";
+        echo $row["be_there"];
+        if($row["snack"]) {echo " bringing snacks" . " against the "; } else {echo " without snacks" . " against the ";}
+        echo $row["against"] . " coached by ";
         echo $row["lead_by"] . "\n";
     }
 } else {
